@@ -3,7 +3,7 @@ import Account from "../models/Account.js";
 export const getAccount = async(req, res) => {
     try{
         const account = await Account.findAll();
-        res.res(account);
+        res.send(account);
     }catch(err){
         console.log(err);
     }
